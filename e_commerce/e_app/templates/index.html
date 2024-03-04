@@ -1,0 +1,88 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Commerce</title>
+    <!-- CSS LINK -->
+    <link href="{%static 'index.css'%}" rel="stylesheet" type="text/css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/daa48e517c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+      <div class="nav-box">
+        <div class="nav-name">
+          <h2>E-Commerce</h2>
+        </div>
+        <div class="nav-button">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="">Resources</a></li>
+            <li><a href="">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <container>
+      <!-- image container -->
+      <div class="main">
+          <div class="main-img">
+            <img src="{%static 'images/2.jpg'%}" alt="main-img">
+          </div>
+          <div class="main-text">
+            <p>No Reach Limitations</p>
+          </div>
+      </div>
+
+      <!-- product container -->
+      <div class="product">
+          <div class="prod-title">
+              <h2>Product List</h2>
+          </div>
+          <div class="prod-card">
+            {% for product in prod  %}
+              <div class="prod-img">
+                <div class="carousel-img-list">
+                  <img src="{{product.p_images.url}}" alt="{{product.p_choices}}" class="image-item">
+                  <img src="{{product.p_images_1.url}}" alt="{{product.p_choices}}" class="image-item">
+                  <img src="{{product.p_images_2.url}}" alt="{{product.p_choices}}" class="image-item">
+                </div>  
+                  <a href=""><h4>{{ product.p_name }}</h4></a>
+                  <p>Quantity: {{ product.p_quantity }}</p>
+              </div>
+              {% endfor %} 
+          </div>
+      </div>
+
+    </container>
+    
+    <footer>
+      <div class="support">
+        <div class="ddriver">
+          <a href="">Delivery Driver</a>
+        </div>
+        <div class="partner">
+          <a href="">Partnership</a>
+        </div>
+      </div>
+      <div class="link">
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <p>&copy; 2024 E_Commerce, Inc.</p>
+      </div>
+      <div class="form">
+        <label for="email">Email Address:</label><br>
+        <input type="email" placeholder="Enter Your Email Address!"><br>
+        <button type="submit">Subscribe</button>
+      </div>
+    </footer>
+</body>
+</html>

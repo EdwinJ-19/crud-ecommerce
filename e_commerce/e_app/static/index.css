@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    background-color: #EDEAD0;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+nav{
+    padding: 1rem 2rem;
+}
+nav .nav-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav .nav-box .nav-name h2{
+    font-size: 2rem;
+}
+nav .nav-button ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+nav .nav-button ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+nav .nav-button ul a:hover{
+    color: #86BAA1;
+    transition: all 0.2s ease-in-out;
+    font-weight: bolder;
+}
+
+container{
+    text-align: center;
+}
+container .main .main-img img{
+    width: 25vw;
+    border-radius: 2rem;
+    padding: 1rem;
+    position: relative;
+}
+container .main .main-text{
+    position: absolute;
+    top: 32vh;
+    left: 40vw;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: #000000;
+    backdrop-filter: blur(10px);
+}
+conatiner .product,.prod-title h2{
+    margin: 1rem;
+}
+container .product .prod-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+container .product .prod-card .prod-img{
+    border: 1px hidden black;
+    box-shadow: 1px 1px 3px #333;
+    padding: 2rem ;
+}
+/* container .product .prod-card .prod-img .carousel-img-list img{
+    margin-bottom: 1rem;
+    width: 12vw;
+    object-fit: cover;
+} */
+container .product .prod-card .prod-img .carousel-img-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    font-size: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 5rem 0;
+}
+/* container .product .prod-card .prod-img .carousel-img-list::-webkit-scrollbar{
+    display: none;
+} */
+container .product .prod-card .prod-img .carousel-img-list .image-item{
+    width: 8vw;
+    height: 15vh;
+    object-fit: cover;
+
+}
+container .product .prod-card .prod-img a{
+    text-decoration: none;
+    color: black;
+}
+container .product .prod-card .prod-img p{
+    margin-top: 1rem;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    padding: 2rem 2rem; 
+    /* background-color: red; */
+}
+footer .support{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+footer .support a{
+    text-decoration: none;
+    color: black;
+}
+footer .support a:hover{
+    color: #86BAA1;
+    transition: all 0.2s ease-in-out;
+    font-weight: bolder;
+}
+footer .link{
+    text-align: center;
+}
+footer .link p{
+    margin-top: 1rem;
+}
+footer .link a{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+footer .link a .fa-instagram:hover{
+    color:#833AB4;
+    transition: all 0.2s ease-in-out;
+}
+footer .link a .fa-facebook:hover{
+    color:#4267B2;
+    transition: all 0.2s ease-in-out;
+}
+footer .link a .fa-linkedin:hover{
+    color:#0A66C2;
+    transition: all 0.2s ease-in-out;
+}
+footer .form input{
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border: none;
+}
+footer .form input:focus{
+    outline: none;
+    box-shadow: 1px 1px 3px #333;
+}
+footer .form button{
+    background-color: #EDEAD0;
+    padding: 0.5rem;
+}
+footer .form button:hover{
+    background-color: #86BAA1;
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
