@@ -38,78 +38,40 @@ nav .nav-button ul a:hover{
     font-weight: bolder;
 }
 
-container{
-    text-align: center;
+container h2{
+    padding: 1rem 2rem;
 }
-container .main .main-img img{
-    width: 25vw;
-    border-radius: 2rem;
-    padding: 1rem;
-    position: relative;
-}
-container .main .main-text{
-    position: absolute;
-    top: 32vh;
-    left: 40vw;
-    font-weight: bolder;
-    font-size: 2rem;
-    color: #000000;
-    backdrop-filter: blur(10px);
-}
-conatiner .product,.prod-title h2{
-    margin: 1rem;
-}
-container .product .prod-card{
+container .cart-box{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
     flex-wrap: wrap;
+    padding: 1rem 5rem;
 }
-container .product .prod-card .prod-img{
-    border: 1px hidden black;
-    box-shadow: 1px 1px 3px #333;
-    padding: 2rem ;
-}
-/* container .product .prod-card .prod-img .carousel-img-list img{
-    margin-bottom: 1rem;
-    width: 12vw;
+container .cart-box .cart-img img{
+    width: 20vw;
+    height: 20vh;
     object-fit: cover;
-} */
-container .product .prod-card .prod-img .carousel-img-list{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    font-size: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-    margin: 2rem 0;
 }
-/* container .product .prod-card .prod-img .carousel-img-list::-webkit-scrollbar{
-    display: none;
-} */
-container .product .prod-card .prod-img .carousel-img-list .image-item{
-    width: 8vw;
-    height: 15vh;
-    object-fit: cover;
-    border: 1px solid black;
-
+container .cart-box .cart-img p{
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
-container .product .prod-card .prod-img a{
-    text-decoration: none;
-    color: black;
+container .cart-box .cart-quantity button,input{
+    padding: 0.5rem;
+    border: none;
+    background-color: white;
+    text-align: center;
 }
-container .product .prod-card .prod-img p{
-    margin: 1rem 0;
-}
-container .product .prod-card .prod-img .prod-button a{
-    border: 1px solid #333;
-    padding: 0.5rem 1rem;
-}
-container .product .prod-card .prod-img .prod-button a:hover{
+container .cart-box .cart-quantity #in_but:hover{
     background-color: #86BAA1;
     color: white;
     transition: all 0.4s ease-in-out;
-    font-weight: bolder;
+}
+container .cart-box .cart-quantity #de_but:hover{
+    background-color: #F45B69;
+    color: white;
+    transition: all 0.4s ease-in-out;
 }
 
 footer{
@@ -117,10 +79,10 @@ footer{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* position: fixed;
+    position: fixed;
     bottom: 0;
     left: 0;
-    right: 0; */
+    right: 0;
     padding: 2rem 2rem; 
     /* background-color: red; */
 }
